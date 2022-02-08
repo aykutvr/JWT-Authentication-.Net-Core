@@ -1,0 +1,23 @@
+﻿@model JWTAuthentication.Models.LoginViewModel
+
+<div class="row">
+    <div class="col">
+        <div class="card" style="max-width:300px;margin:0 auto;">
+    <div class="card-header">
+        <h5 class="card-title">Authentication</h5>
+    </div>
+    <div class="card-body">
+        @using(Html.BeginForm(FormMethod.Post))
+        {
+            @Html.LabelFor(m=> m.EmailAddress,new { @class = "form-label"});
+            @Html.TextBoxFor(m=> m.EmailAddress,new { @class = "form-control"});
+            @Html.LabelFor(m=> m.Password,new { @class = "form-label"});
+            @Html.TextBoxFor(m=> m.Password,new { @class = "form-control"});
+            <button type="submit" class="btn btn-primary w-100 mt-3">Log In</button>
+        }
+    </div>
+</div>
+
+    </div>
+</div>
+
